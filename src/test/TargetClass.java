@@ -19,8 +19,13 @@ public class TargetClass {
         return values;
     }
 
-
     public void addValue(ValueTargetClass value){
         values.add(value);
+    }
+
+    public void removeValue(){}
+
+    boolean isRestricted(){
+        return true;
     }
 }

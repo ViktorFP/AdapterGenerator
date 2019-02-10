@@ -18,6 +18,11 @@ public class ObjectClassAdapter extends test.TargetClass {
  }
 
  /***/
+ public void removeValue()
+ {
+ }
+
+ /***/
  public java.lang.String getName()
  {
   return m_objectClass.getName();
@@ -39,12 +44,6 @@ public class ObjectClassAdapter extends test.TargetClass {
  public java.lang.String toString()
  {
   return m_objectClass.toString();
- }
-
- /***/
- public int hashCode()
- {
-  return m_objectClass.hashCode();
  }
 
 }

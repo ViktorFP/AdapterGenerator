@@ -48,10 +48,13 @@ public class Generator {
     private static void addMethods(Class targetClass, String objectClassMemberName, StringBuilder sb) {
         Method[] methods = targetClass.getMethods();
         for (Method method : methods) {
-            if (!Modifier.isFinal(method.getModifiers())) {
+            if (!Modifier.isFinal(method.getModifiers()) &&
+                    method.getModifiers() == Modifier.PUBLIC) {
                 //todo @param ...
                 //todo lists (check type by add())
                 // and Objects: from type1 to type2
+                //todo marshaling?
+                //todo skip generation if required adapter already exists
                 sb.append("\n\n /***/\n");
                 sb.append(" public ");
                 if (method.getModifiers() == Modifier.STATIC) {
